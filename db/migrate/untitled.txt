@@ -1,0 +1,28 @@
+class CreateKnowledgeBricks < ActiveRecord::Migration[6.0]
+  def change
+    create_table :knowledge_bricks do |t|
+      t.string     :title
+      t.string     :knowledge_type
+      t.text       :description
+      t.references :category, foreign_key: true
+
+      t.timestamps
+    end
+  end
+end
+
+
+class KnowledgeBrick < ApplicationRecord
+  def self.knowledge_types
+    return %w[tutorial snippet command summary other]
+  end
+
+  belongs_to :category
+
+  validates :title, presence: true
+  validates :knowledge_type, presence: true, inclusion: {
+    in: %w[tutorial snippet command summary other], #Knowledge.types,
+    message: "%{value} não é um tipo válido!"
+  }
+  validates :description, presence: true
+end
