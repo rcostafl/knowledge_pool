@@ -24,6 +24,18 @@ c_info = Category.create!(
   user: usr
 )
 
+c_info = Category.create!(
+  name: "estatística",
+  description: "agrega conhecimentos estatísticos",
+  user: usr
+)
+
+c_info = Category.create!(
+  name: "língua portuguesa",
+  description: "agrega conhecimentos relacionados àlíngua portuguesa",
+  user: usr
+)
+
 c_dev = Category.create!(
   name: "desenvolvimento",
   description: "agrega conhecimento sobre desenvolvimento, linguagens de programação, sql, códigos e etc.",

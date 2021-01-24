@@ -1,8 +1,10 @@
 <div class="container">
-  <h1>Pages#home</h1>
-  <p>Find me in app/views/pages/home.html.erb</p>
+  <h1>Knowledge Categories</h1>
 
   <% @categories.each do |category| %>
-    <%= "categoria: #{category.name}"%>
+    <div class="bcard">
+      <h3><%= "#{category.name}".upcase%></h3>
+      <span><%= "#{category.description}"%></span>
+    </div>
   <% end %>
 </div>
