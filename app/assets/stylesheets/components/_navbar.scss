@@ -1,6 +1,12 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: black;
+  color: $purple;
+  text-weight: bolder;
+}
+
+.navbar-brand{
+  color: $purple;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -10,3 +16,12 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+#dropdownMenuButton{
+  color: $purple;
+}
+
+.link-icon{
+  color: $purple;
+}
+
