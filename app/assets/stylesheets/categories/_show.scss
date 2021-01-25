@@ -1,0 +1,27 @@
+.four-division-container{
+  display: flex;
+  min-height: 100vh;
+
+  .nav{
+    border: 1px solid black;
+    width: 70px;
+  }
+
+  .menu{
+    border: 1px solid black;
+    width: 300px;
+  }
+
+  .main{
+    border: 1px solid black;
+    width: auto;
+    flex-grow: 1;
+  }
+
+  .aside{
+    border: 1px solid black;
+    width: auto;
+    flex-grow: 1;
+  }
+
+}

@@ -1,10 +1,15 @@
 <div class="container">
   <h1>Knowledge Categories</h1>
+  <div class="grid-container">
+    <% @categories.each do |category| %>
 
-  <% @categories.each do |category| %>
-    <div class="bcard">
-      <h3><%= "#{category.name}".upcase%></h3>
-      <span><%= "#{category.description}"%></span>
-    </div>
-  <% end %>
+      <div class="bcard">
+        <%= link_to category_path(category) do%>
+          <h3><%= "#{category.name}".upcase%></h3>
+          <span><%= "#{category.description}"%></span>
+        <% end %>
+      </div>
+
+    <% end %>
+  </div>
 </div>
